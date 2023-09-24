@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(33, 212, 253, 0.3); /* Adjust the last value (0.5) for the desired opacity */
+ 
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 10px;
+  position:relative;
+}
+
+h3 {
+  color: gray;
+  padding-left: 34px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.glass-profile,
+.glass-form {
+  background: white;
+  height: 95vh;
+  width: 15%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 5px;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  overflow-y: scroll;
+}
+
+.glass-profile::-webkit-scrollbar,
+.glass-form::-webkit-scrollbar {
+  width: 2px;
+}
+
+.glass-profile::-webkit-scrollbar-thumb,
+.glass-form::-webkit-scrollbar-thumb {
+  background: #0d1840;
+}
+
+.glass-form {
+  width: 75%;
+}
+
+.profile-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0d1840;
+  color: #efefef;
+  height: 30vh;
+  opacity: 0.9;
+}
+
+.profile-upper > .profile-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.profile-upper > .profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-upper > .profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-menu {
+  height: 60vh;
+}
+
+.profile-menu nav {
+  color: #0d1840;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-menu nav div {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding: 10px;
+  border-radius: 6px;
+}
+.profile-menu nav div:hover {
+  color: #efefef;
+
+  background: #0d1840;
+}
+
+.profile-menu nav span {
+  font-weight: bold;
+}
+
+.profile-menu nav div .menu-icon {
+  margin-right: 10px;
+}
+
+.menu-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 15.8%;
+}
+
+img {
+  width: 50%;
+  margin-bottom: 12px;
+}
+
+.nav-upper {
+  display: flex;
+  color: #0d1840;
+  align-items: center;
+}
+
+.nav-upper-digital__mentore {
+  padding: 10px;
+  margin-right: 90px;
+}
+
+.nav-upper-digital__mentore > span {
+  font-weight: bold;
+}
+
+.robot-icon {
+  font-size: 60px;
+  margin-right: 5px;
+}
+
+.nav-upper-greet {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.nav-lower {
+  padding: 20px;
+  background: #0d1840;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 40px 40px;
+}
+
+.nav-lower__logo {
+  color: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-lower__logo > h3 {
+  color: #efefef !important;
+  padding: 5px !important;
+  margin: 0 !important;
+  font-size: 20px !important;
+}
+
+.experiment__logo {
+  font-size: 25px;
+  margin: 5px;
+  animation: shake 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.glass-form-structure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form,
+.calculations {
+  padding: 20px;
+}
+
+.form > span,
+.calculations > span {
+  font-size: 14px;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+
+.form-input-area > div {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-area label,
+input {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.form-input-area > div > div {
+  padding: 10px 10px 10px 0;
+  width: 30%;
+  border: 2px solid #0d1840;
+  border-radius: 5px 5px 20px 5px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+select,
+input {
+  width: 100%;
+  font-size: 10px;
+  border: none;
+  background: none;
+  outline: 0;
+}
+.form-input-area > div > select > option {
+  font-size: 10px !important;
+}
+
+.calculations {
+  border-left: 2px solid;
+}
+
+.results {
+  grid-column: span 2;
+}
+
+.submit,
+.calculations > button {
+  float: right;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #efefef;
+  background: #0d1840;
+}
+
+.calculations > div {
+  padding-top: 20px;
+}
+
+.calculations > div > div {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  width: 30%;
+  border: 2px solid #0d1840;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.calculations > div > div > span:first-child {
+  background: green;
+  padding: 10px;
+  background: #0d1840;
+  color: #efefef;
+}
+
+.calculations > button {
+  margin-top: 20px;
+}
+
+/* Add this CSS to your project's stylesheet */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background: #0d1840;
+  color: #efefef;
+  padding: 10px;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background: #0d1840;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #efefef;
+  color: #0d1840;
+}
+::placeholder {
+  color: #0d1840;
+}
+
+@media screen and (max-width: 992px) {
+  .glass-profile {
+    display: none;
+  }
+
+  .app {
+    overflow:hidden;
+  }
+  .glass-form {
+    width: 100%;
+    height: 100vh;
+  }
+  .form-input-area > div > div {
+    width: 140px;
+  }
+  .calculations > div > div {
+    width: 120px;
+  }
+
+  .results {
+    overflow-x: scroll;
+  }
+  .results::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  .results::-webkit-scrollbar-thumb {
+    background: #0d1840;
+  }
+
+  .results button {
+    margin:2px;
+    font-size:10px;
+  }
+}
+
+.ball {
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    opacity:0.6;
+    top:10%;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: moveIrregularly 5s linear infinite, glow 1s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes moveIrregularly {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 50px);
+    }
+    50% {
+        transform: translate(-50px, 150px);
+    }
+    75% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(-100px, 0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(52, 152, 219, 1);
+    }
+}
+
+.unit-selection {
+  display:flex;
+}
+
+.unit-selection > input {
+  border-right:2px solid #0d1840;
+  width:42%;
+}
+
+
+
